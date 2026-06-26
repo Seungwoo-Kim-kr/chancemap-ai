@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# 환경변수 (API 키 등 절대 커밋 금지)
+.env
+.env.*
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Notion guide PDFs (local only)
+Notion_Guide/
+
+# IDE
+.vscode/
+.idea/
+
+# 테스트 캐시
+.pytest_cache/

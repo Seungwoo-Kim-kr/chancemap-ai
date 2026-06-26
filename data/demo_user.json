@@ -1,0 +1,71 @@
+{
+  "scenario_1_international_student": {
+    "user_id": "demo_intl_student",
+    "major": "Artificial Intelligence",
+    "degree_level": "undergraduate",
+    "student_status": "international_student",
+    "career_stage": "student",
+    "coursework_end_year": 2026,
+    "expected_graduation_year": 2027,
+    "skills": ["Python", "RAG", "Graph Retrieval", "LLM", "Data Analysis", "Machine Learning"],
+    "projects": [
+      {
+        "title": "Graph-Augmented RAG for Emotion Recognition",
+        "keywords": ["RAG", "Graph", "LLM", "ERC", "Evaluation", "Research Experience"],
+        "description": "Research project applying graph-based RAG to improve emotion recognition performance"
+      }
+    ],
+    "target_country": ["Korea"],
+    "target_field": ["AI", "Software", "Research"],
+    "target_opportunity_type": ["internship", "competition", "research"],
+    "available_documents": ["resume", "portfolio"],
+    "missing_documents": ["transcript", "certificate_of_enrollment", "cover_letter"],
+    "constraints": ["international student", "domestic work availability confirmation needed"]
+  },
+  "scenario_2_career_changer": {
+    "user_id": "demo_career_changer",
+    "major": "Mechanical Engineering",
+    "degree_level": "undergraduate",
+    "student_status": "domestic_student",
+    "career_stage": "career_changer",
+    "coursework_end_year": 2021,
+    "expected_graduation_year": 2021,
+    "skills": ["Python", "Data Analysis", "Excel", "SQL"],
+    "projects": [
+      {
+        "title": "Factory Defect Detection Dashboard",
+        "keywords": ["Data Analysis", "Python", "Visualization", "Dashboard"],
+        "description": "Built a data dashboard for manufacturing defect tracking using Python"
+      }
+    ],
+    "target_country": ["Korea"],
+    "target_field": ["AI", "Data"],
+    "target_opportunity_type": ["job", "education", "competition"],
+    "available_documents": ["resume", "cover_letter"],
+    "missing_documents": ["portfolio"],
+    "constraints": ["currently employed", "seeking AI career transition"]
+  },
+  "scenario_3_entrepreneur": {
+    "user_id": "demo_entrepreneur",
+    "major": "Business Administration",
+    "degree_level": "undergraduate",
+    "student_status": "domestic_student",
+    "career_stage": "entrepreneur",
+    "coursework_end_year": 2023,
+    "expected_graduation_year": 2023,
+    "skills": ["Business Planning", "Python", "Communication", "AI"],
+    "projects": [
+      {
+        "title": "AI-based Campus Food Recommendation App",
+        "keywords": ["AI", "Business Planning", "Problem Solving", "API Integration"],
+        "description": "Developed and launched an AI recommendation app serving 500 daily active users"
+      }
+    ],
+    "target_country": ["Korea"],
+    "target_field": ["AI", "Startup", "Technology"],
+    "target_opportunity_type": ["government_support", "startup_support", "competition"],
+    "available_documents": ["resume", "project_proposal", "cover_letter"],
+    "missing_documents": ["team_introduction"],
+    "constraints": ["pre-incorporation stage", "needs seed funding"]
+  }
+}

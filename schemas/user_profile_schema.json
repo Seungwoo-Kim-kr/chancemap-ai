@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfile",
+  "description": "ChanceMap AI 사용자 프로필 스키마",
+  "type": "object",
+  "required": ["user_id", "major", "degree_level", "skills"],
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "사용자 식별자"
+    },
+    "major": {
+      "type": "string",
+      "description": "전공명. 예: Artificial Intelligence"
+    },
+    "degree_level": {
+      "type": "string",
+      "enum": ["undergraduate", "graduate", "phd"],
+      "description": "학위 과정"
+    },
+    "student_status": {
+      "type": "string",
+      "enum": ["domestic_student", "international_student", "graduate_seeking_job"],
+      "description": "재학 상태"
+    },
+    "coursework_end_year": {
+      "type": "integer",
+      "description": "수업 이수 완료 예정 연도"
+    },
+    "expected_graduation_year": {
+      "type": "integer",
+      "description": "졸업 예정 연도"
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "보유 기술 목록. 예: [Python, RAG, Graph Retrieval]"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "description": { "type": "string" }
+        }
+      },
+      "description": "프로젝트/연구 경험 목록"
+    },
+    "target_country": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "희망 근무/활동 국가. 예: [Korea]"
+    },
+    "target_field": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "관심 분야. 예: [AI, Data, Software]"
+    },
+    "target_opportunity_type": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["internship", "competition", "scholarship", "research"]
+      },
+      "description": "관심 기회 유형"
+    },
+    "available_documents": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "현재 보유 중인 서류"
+    },
+    "missing_documents": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "아직 준비되지 않은 서류"
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "지원 시 제약 또는 확인이 필요한 사항"
+    }
+  }
+}

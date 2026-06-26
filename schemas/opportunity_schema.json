@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Opportunity",
+  "description": "ChanceMap AI 기회 공고 스키마",
+  "type": "object",
+  "required": ["id", "title", "type", "field", "eligibility", "required_skills", "required_documents", "deadline"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "고유 식별자. 예: opp_001"
+    },
+    "title": {
+      "type": "string",
+      "description": "공고 제목"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["internship", "competition", "scholarship", "research"],
+      "description": "기회 유형"
+    },
+    "field": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "관련 분야. 예: [AI, Data, Software]"
+    },
+    "description": {
+      "type": "string",
+      "description": "공고 요약 설명"
+    },
+    "provider": {
+      "type": "string",
+      "description": "주관 기관 또는 기업명"
+    },
+    "location": {
+      "type": "string",
+      "description": "근무/참가 지역. 예: Seoul, Remote, Online"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date",
+      "description": "지원 마감일. YYYY-MM-DD 형식"
+    },
+    "eligibility": {
+      "type": "object",
+      "description": "지원 자격요건",
+      "properties": {
+        "education_level": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["undergraduate", "graduate", "phd", "any"]
+          }
+        },
+        "major": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "관련 전공. 예: [AI, Computer Science, Data Science]"
+        },
+        "graduation_status": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["student", "expected_graduate", "graduate", "any"]
+          }
+        },
+        "nationality": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "국적 조건. 예: [any] 또는 [Korean]"
+        },
+        "international_student_allowed": {
+          "type": "string",
+          "enum": ["yes", "no", "unknown"],
+          "description": "해외 대학 재학생 지원 가능 여부"
+        },
+        "work_availability": {
+          "type": "string",
+          "enum": ["domestic_only", "remote_possible", "any"],
+          "description": "국내 근무 가능 여부 조건"
+        }
+      }
+    },
+    "required_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "필수 기술 스택"
+    },
+    "preferred_skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "우대 기술 스택"
+    },
+    "required_documents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["resume", "transcript", "certificate_of_enrollment", "portfolio", "cover_letter", "recommendation_letter", "english_certificate", "graduation_certificate", "project_proposal", "team_introduction"]
+      },
+      "description": "필수 제출 서류"
+    },
+    "selection_criteria": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "평가 기준 키워드"
+    },
+    "risk_notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "지원 시 확인이 필요한 불확실 항목"
+    },
+    "application_url": {
+      "type": "string",
+      "description": "지원 링크 (샘플 데이터의 경우 빈 문자열 허용)"
+    }
+  }
+}
