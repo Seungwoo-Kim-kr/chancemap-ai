@@ -1,4 +1,3 @@
-mcp[cli]
-fastmcp
+mcp[cli]>=1.2.0
 networkx
 rank_bm25

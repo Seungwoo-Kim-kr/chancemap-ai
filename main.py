@@ -544,4 +544,4 @@ def generate_strategy(
 # ── Run ───────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     PORT = int(os.environ.get("PORT", 8000))
-    mcp.run(transport="sse", host="0.0.0.0", port=PORT)
+    mcp.run(transport="streamable-http", host="0.0.0.0", port=PORT)
